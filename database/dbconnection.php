@@ -4,5 +4,4 @@ if($conn->connect_error){
     echo "connection error".$conn->connect_error;
 }
 
-
 ?>

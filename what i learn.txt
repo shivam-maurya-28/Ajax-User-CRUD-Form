@@ -1,0 +1,16 @@
+what i have learned from this project 
+
+we can use data-anyname="+var[i].id+"  to assign the attribute id of row. for more operation of that row.
+
+we can use ajax with get method to fetch data 
+	like we can write this ajax in function and call everytime when a button is click so that data update or refresh data without page load.
+
+get the form specific classname element attribute value in variable .
+
+when i am deleting the row and updating the table  it's long process to save time i used the
+before ajax started. 
+mythis = this;
+$(mythis).closest('tr').fadeOut();
+hide that row from screen.
+
+own if id exist the update query block run else insert block run 
