@@ -32,13 +32,14 @@ fetch_table();
 //ajax call for insert data
     $('#btnadd').click(function(e){
         e.preventDefault();
+        const id = $('#usrId').val();
         const name= $('#nameid').val();
         const email = $('#emailid').val();
         const pass= $('#passid').val();
         $.ajax({
             url:"database/insert_data.php",
             method:"POST",
-            data:{name,email,pass},
+            data:{name,email,pass,id},
             success:function(data){
                 if(data== "success"){
                     msg = "<div class='alert alert-success'>"+data+"</div>";
@@ -88,7 +89,6 @@ fetch_table();
 
     //ajax call for edit data
     $('tbody').on('click','.btn-edit',function(){
-        console.log('edit button is clicked');
         dataId = $(this).attr('data-edit');
         $.ajax({
             url:"database/edit.php",
@@ -96,7 +96,7 @@ fetch_table();
             data:{"id":dataId},
             dataType:"json",
             success:function(data){
-                console.log(data);
+                $('#usrId').val(data.id);
                 $('#nameid').val(data.name);
                 $('#emailid').val(data.email);
                 $("#passid").val(data.password);
