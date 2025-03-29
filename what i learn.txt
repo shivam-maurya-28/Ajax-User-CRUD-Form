@@ -13,4 +13,18 @@ mythis = this;
 $(mythis).closest('tr').fadeOut();
 hide that row from screen.
 
-own if id exist the update query block run else insert block run 
+Jquery function i used
+ready()
+attr()
+on()
+val()
+ajax()
+html()
+reset()  ex. $("#myform")[0].reset();
+closest() fadeout() ex. $(mythis).closest('tr').fadeOut();
+
+Edit button working
+-> get the row button data-delete id  into variable 
+-> then passed to the edit.php to fetch that id detail and set to the form element using jquery and val($valueToSet) 
+->make a filed of input text and set the value of that row id.
+-> make changes in the insert jquery code that get the id and passed to the sql query with if dublicate key then update  else new row.
